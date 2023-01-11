@@ -1,0 +1,74 @@
+{
+    "editor.fontFamily": "'JetBrainsMono Nerd Font', Consolas",
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.colorTheme": "GitHub Dark",
+    "editor.lineNumbers": "relative",
+    "editor.fontSize": 16,
+    
+    
+    
+    "files.eol": "\n",
+    "git.confirmSync": false,
+    "editor.minimap.enabled": false,
+    "editor.inlineSuggest.enabled": true,
+    "editor.bracketPairColorization.enabled": false,
+    "terminal.integrated.defaultProfile.linux": "fish",
+    "terminal.integrated.defaultProfile.windows": "PowerShell",
+    
+    "editor.tokenColorCustomizations": {
+        "[GitHub Dark]": {
+            "textMateRules": [
+                {
+                    "scope": "meta.function-call.generic.python",
+                    "settings": {
+                        "foreground": "#a89dda"
+                    }
+                },
+                {
+                    "scope": [
+                        "string.quoted.docstring.multi.python",
+                        "string.quoted.single.python"
+                    ],
+                    "settings": {
+                        "foreground": "#7ec29a"
+                    }
+                }
+            ]
+        }
+    },
+
+    "editor.semanticTokenColorCustomizations": {
+        "[GitHub Dark]": {
+            "rules": {
+                "class": "#a89dda",
+                "method": "#a89dda",
+                "function": "#a89dda",
+                "module": "#a89dda",
+                "variable": "#cfd2da",
+                "property": "#cfd2da",
+                "selfParameter": "#ffa657",
+                "parameter": "#79C0FF",
+                "builtinConstant": "#ffa657",
+            }
+        }
+    },
+
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter",
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": false
+        },
+    },
+
+    "[typescript]": {
+        "editor.formatOnSave": true,
+        "editor.tabSize": 2,
+    },
+
+    "[typescriptreact]": {
+        "editor.formatOnSave": true,
+        "editor.tabSize": 2,
+    },
+    
+}
