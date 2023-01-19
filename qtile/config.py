@@ -8,7 +8,7 @@ from libqtile.lazy import lazy
 from settings import *
 from keys import *
 
-from widgets import w_battery, w_volume, w_light
+from widgets import w_battery, w_volume, w_light, w_systray
 
 home = os.path.expanduser("~")
 script_folder = f"{home}/.config/qtile/scripts"
@@ -19,7 +19,7 @@ layouts = [
         border_normal=colors["border_normal"],
         margin=gaps,
         border_width=border_width,
-        border_on_single=True,
+        border_on_single=False,
         grow_amount=2,
     ),
     layout.Spiral(
@@ -36,7 +36,6 @@ layouts = [
         border_width=border_width,
         grow_amount=2,
     ),
-    
 ]
 
 widget_defaults = dict(
@@ -65,7 +64,7 @@ screens = [
                     length=10,
                 ),
                 widget.GroupBox(
-                    fontsize=45,
+                    fontsize=35,
                     hide_unused=False,
                     highlight_method="block",
                     highlight_color=colors["sapphire"],
@@ -81,8 +80,8 @@ screens = [
                     font="Roboto, Regular",
                 ),
                 widget.Spacer(length=bar.STRETCH, background=colors["background"]),
-
                 # ---------------------------------------
+                # w_systray,
                 *w_light,
                 widget.Spacer(
                     length=10,

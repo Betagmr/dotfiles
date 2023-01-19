@@ -24,8 +24,13 @@ keys = [
     Key([mod, ctr], "r", lazy.reload_config(), desc="Reload the config"),
     Key([mod, ctr], "q", lazy.shutdown(), desc="Shutdown Qtile"),
     Key([mod], "r", lazy.spawn("rofi -show drun"), desc="Launch rofi"),
+    # Special keys
+    Key([], "XF86AudioMute", lazy.spawn("pactl set-sink-mute @DEFAULT_SINK@ toggle")),
+    Key([], "XF86AudioLowerVolume", lazy.spawn("pulsemixer --change-volume -5")),
+    Key([], "XF86AudioRaiseVolume", lazy.spawn("pulsemixer --change-volume +5")),
+    Key([], "XF86MonBrightnessUP", lazy.spawn("brightnessctl set +5%")),
+    Key([], "XF86MonBrightnessDown", lazy.spawn("brightnessctl set 5%-")),
 ]
-
 
 groups = [Group(f" {i} ") for i in ["", "", "﬏", "", "阮"]]
 

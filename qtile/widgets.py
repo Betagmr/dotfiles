@@ -9,13 +9,18 @@ w_battery = (
             margin=7
         ),
         widget.Battery(
-            format=" {percent:2.0%}",
+            discharge_char="",
+            full_char="",
+            unknown_char="",
+            empty_char="",
+            charge_char="",
+            format="{char} {percent:2.0%} ",
             font="Roboto, Regular",
             foreground=colors["red"],
             padding=0,
         )
     )
-    if False
+    if True
     else (
         widget.Image(
             filename="~/.config/qtile/assets/bar/bat.png", 
@@ -60,7 +65,7 @@ w_light = (
             padding=0,
         )
     )
-    if False
+    if True
     else (
         widget.Image(
             filename="~/.config/qtile/assets/bar/sun.png", 
@@ -72,4 +77,10 @@ w_light = (
             padding=0,
         )
     )
+)
+
+
+w_systray = widget.Systray(
+    padding=10,
+    icon_size=20
 )
