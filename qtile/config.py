@@ -1,14 +1,13 @@
 import os
 import subprocess
-from libqtile import hook
-from libqtile import bar, qtile, lazy
-from libqtile import bar, layout, widget
+
+from libqtile import bar, hook, layout, lazy, qtile, widget
 from libqtile.config import Click, Drag, Group, Key, Match, Screen
 from libqtile.lazy import lazy
-from settings import *
-from keys import *
 
-from widgets import w_battery, w_volume, w_light, w_systray
+from keys import *
+from settings import *
+from widgets import w_battery, w_light, w_systray, w_volume
 
 home = os.path.expanduser("~")
 script_folder = f"{home}/.config/qtile/scripts"
@@ -46,7 +45,7 @@ extension_defaults = widget_defaults.copy()
 
 screens = [
     Screen(
-        wallpaper="~/Downloads/wallpaper.png",
+        wallpaper=".config/qtile/assets/wallpaper.png",
         wallpaper_mode="fill",
         bottom=bar.Gap(10),
         left=bar.Gap(10),
@@ -64,13 +63,20 @@ screens = [
                     length=10,
                 ),
                 widget.GroupBox(
-                    fontsize=35,
+                    fontsize=25,
                     hide_unused=False,
-                    highlight_method="block",
-                    highlight_color=colors["sapphire"],
+                    highlight_method="line",
+                    # highlight_color=colors["border_normal"],
+                    highlight_color=colors["base"],
                     active=colors["white"],
                     inactive=colors["gray"],
+                    padding_y = 20,
+                    padding_x = 20,
                     disable_drag=True,
+                    this_current_screen_border=colors["blue"],
+                    this_screen_border=colors["blue"],
+                    other_current_screen_border='#353446',
+                    other_screen_border=None,
                 ),
                 widget.Prompt(),
                 # ----------------------------------------
@@ -114,10 +120,17 @@ screens = [
                     length=10,
                 ),
             ],
-            40,
+            35,
             margin=[6, 12, 6, 12],
             background=colors["background"],
         ),
+    ),
+    Screen(
+        wallpaper=".config/qtile/assets/wallpaper.png",
+        wallpaper_mode="fill",
+        bottom=bar.Gap(10),
+        left=bar.Gap(10),
+        right=bar.Gap(10),
     ),
 ]
 

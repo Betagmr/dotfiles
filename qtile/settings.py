@@ -24,7 +24,7 @@ colors = {
     "background": "#16191f",
     "border_focus": "#cfd2da",
     "border_normal": "#232831",
-    "sapphire": "#7dc4e4",
+    "sapphire": "#7db4e4",
     "yellow": "#eed49f",
     "blue": "#8aadf4",
     "red": "#ed8796",
@@ -33,7 +33,7 @@ colors = {
     "gray": "#373c4a",
 }
 
-# 232831, #16191f
+# #232831, #16191f
 
 # Keys
 gaps = 4

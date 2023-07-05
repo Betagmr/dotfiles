@@ -20,7 +20,7 @@ w_battery = (
             padding=0,
         )
     )
-    if True
+    if False
     else (
         widget.Image(
             filename="~/.config/qtile/assets/bar/bat.png", 
@@ -65,7 +65,7 @@ w_light = (
             padding=0,
         )
     )
-    if True
+    if False
     else (
         widget.Image(
             filename="~/.config/qtile/assets/bar/sun.png", 
